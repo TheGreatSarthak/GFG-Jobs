@@ -28,3 +28,37 @@ body {
     text-wrap: balance;
   }
 }
+
+.light-mode[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  z-index: 1;
+  font-size: 12px;
+
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
+  color: #fff;
+}
+
+.dark-mode[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  z-index: 1;
+  font-size: 12px;
+
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 212 216 / var(--tw-bg-opacity));
+  color: #333;
+}

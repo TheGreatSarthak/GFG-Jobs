@@ -1,8 +1,17 @@
+"use client";
+
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { CiFilter } from "react-icons/ci";
 import JobList from "./components/nav/JobList";
+import { useState } from "react";
 
 const Home = () => {
+  const [clicked, setClicked] = useState("All Jobs");
+
+  const toggleClick = (value) => {
+    setClicked(value);
+  };
+
   return (
     <div className="pt-11">
       {/* banner */}
@@ -75,11 +84,49 @@ const Home = () => {
       {/* category selectors and filter */}
       <div className="px-16 mt-14 mb-8">
         <div className="flex flex-row border-b-[1.5px] border-gray-400 w-full justify-between">
-          <div className=" text-gray-400 font-normal">
-            <button className="p-2">All Jobs</button>
-            <button className="p-2">GFG Job Fair</button>
-            <button className="p-2">Applied</button>
-            <button className="p-2">Archived</button>
+          <div className="text-gray-400 font-normal">
+            <button
+              className={`p-2 ${
+                clicked === "All Jobs"
+                  ? "border-b-[3px] border-gray-400 text-gray-200 font-semibold"
+                  : null
+              }`}
+              onClick={() => toggleClick("All Jobs")}
+            >
+              All Jobs
+            </button>
+            <button
+              className={`p-2 relative ${
+                clicked === "Job Fair"
+                  ? "border-b-[3px] border-gray-400 text-gray-200 font-semibold"
+                  : null
+              }`}
+              onClick={() => toggleClick("Job Fair")}
+            >
+              GFG Job Fair
+              <div className="absolute w-2 h-2 rounded-full bg-[#9dacf8] top-1 right-0"></div>
+            </button>
+
+            <button
+              className={`p-2 ${
+                clicked === "Applied"
+                  ? "border-b-[3px] border-gray-400 text-gray-200 font-semibold"
+                  : null
+              }`}
+              onClick={() => toggleClick("Applied")}
+            >
+              Applied
+            </button>
+            <button
+              className={`p-2 ${
+                clicked === "Archived"
+                  ? "border-b-[3px] border-gray-400 text-gray-200 font-semibold"
+                  : null
+              }`}
+              onClick={() => toggleClick("Archived")}
+            >
+              Archived
+            </button>
           </div>
           <div className="flex">
             <button className="flex px-4 py-1 border rounded-md text-green-700 border-green-700 mb-2 text-sm items-center hover:text-white hover:bg-green-700">
@@ -91,7 +138,7 @@ const Home = () => {
       </div>
       {/* jobs */}
       <JobList />
-      <div className="w-24 h-24 fixed bottom-5 right-5">
+      <div className="w-24 h-24 fixed bottom-5 right-5 cursor-pointer">
         <img src="https://media.geeksforgeeks.org/img-practice/fab-icon-new.gif" />
       </div>
     </div>
