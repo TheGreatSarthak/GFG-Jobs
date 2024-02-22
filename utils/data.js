@@ -77,10 +77,30 @@ export const options = [
       {
         name: "For Working Professionals",
         data: [
-          { name: "Interview 101: DSA & System Design" },
+          {
+            name: "Interview 101: DSA & System Design",
+            data: [
+              { name: "Interview 101: DSA & System Design" },
+              { name: "Data Science Training Program" },
+              { name: "JAVA Backend Development(Live)" },
+              { name: "DevOps Engineering(Live)" },
+              { name: "Software Testing & Automation(Live)" },
+              { name: "Data Structures & Algorithms in Python" },
+            ],
+          },
           { name: "Data Science Training Program" },
           { name: "JAVA Backend Development(Live)" },
-          { name: "DevOps Engineering(Live)" },
+          {
+            name: "DevOps Engineering(Live)",
+            data: [
+              { name: "Interview 101: DSA & System Design" },
+              { name: "Data Science Training Program" },
+              { name: "JAVA Backend Development(Live)" },
+              { name: "DevOps Engineering(Live)" },
+              { name: "Software Testing & Automation(Live)" },
+              { name: "Data Structures & Algorithms in Python" },
+            ],
+          },
           { name: "Software Testing & Automation(Live)" },
           { name: "Data Structures & Algorithms in Python" },
         ],
