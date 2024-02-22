@@ -9,7 +9,7 @@ const JobList = () => {
           Modify recommendations
         </button>
       </div>
-      <div className="grid grid-cols-3 px-[70px] gap-4 py-3">
+      <div className="grid grid-cols-3 max-md:grid-cols-1 max-xl:grid-cols-2  px-[70px] gap-4 py-3">
         {jobs.map((job) => (
           <JobCard job={job} />
         ))}

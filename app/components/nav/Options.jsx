@@ -17,7 +17,7 @@ const Options = () => {
       {options.map((option) => (
         <div className="flex group">
           <div
-            className="flex ml-3 my-3 cursor-pointer hover:text-green-700 font-semibold"
+            className="flex ml-4 my-3 cursor-pointer hover:text-green-700 font-semibold"
             onMouseOver={() => handleHover(option.name)}
             //onMouseOut={() => handleHover(null)}
           >

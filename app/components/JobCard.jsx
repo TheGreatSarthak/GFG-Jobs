@@ -20,7 +20,7 @@ const JobCard = ({ job }) => {
               <PiSuitcaseBold size={18} />
               <div className="ml-1 text-gray-200">{job.experience}</div>
             </div>
-            <div className="flex relative hover:cursor-pointer text-[10px] mx-2 text-gray-400 font-medium">
+            <div className="flex relative z-0 hover:cursor-pointer text-[10px] mx-2 text-gray-400 font-medium">
               <BiWalletAlt size={18} />
               <div className="ml-1 text-gray-200">{job.salary}</div>
             </div>

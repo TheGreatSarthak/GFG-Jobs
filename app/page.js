@@ -2,7 +2,7 @@
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { CiFilter } from "react-icons/ci";
-import JobList from "./components/nav/JobList";
+import JobList from "./components/JobList";
 import { useState } from "react";
 
 const Home = () => {
@@ -15,8 +15,8 @@ const Home = () => {
   return (
     <div className="pt-11">
       {/* banner */}
-      <div className="flex flex-row text-sm justify-center items-center bg-[#019679] font-semibold p-2">
-        <div className="mx-2">
+      <div className="flex flex-row text-sm justify-center items-center bg-[#019679] font-medium p-2">
+        <div className="mx-2 text-[13px] max-lg:w-[60%] overflow-clip text-ellipsis whitespace-nowrap">
           Recruiters, join our Hiring Challenge to connect with exceptional
           global talent. Don't miss out, participate now!
         </div>
@@ -33,8 +33,8 @@ const Home = () => {
           )`,
         }}
       >
-        <div className="text-4xl flex flex-row justify-center font-semibold pt-6 p-2 tracking-widest">
-          Get hired with <div className="text-green-700 mx-2">GFG</div>
+        <div className="max-sm:text-3xl text-4xl flex flex-row justify-center font-medium pt-6 p-2 tracking-widest">
+          Get hired with <div className="text-green-700 mx-2">Gfg Job fair</div>
         </div>
         <div className="flex flex-row justify-center items-center">
           <div className="text-sm py-2">powered by</div>
@@ -50,20 +50,26 @@ const Home = () => {
         </div>
         <div className="flex flex-row justify-center pt-7 pb-9">
           <div className="mx-[18px]">
-            <div className="font-semibold text-xl text-center pb-1">150+</div>
-            <div className="text-xs font-semibold text-gray-300">
-              No of Organisations
+            <div className="font-semibold max-sm:text-base text-xl text-center pb-1">
+              150+
+            </div>
+            <div className="text-xs max-sm:text-[8px] font-semibold text-gray-300">
+              Organisations
             </div>
           </div>
           <div className="mx-[18px]">
-            <div className="font-semibold text-xl text-center pb-1">200+</div>
-            <div className="text-xs font-semibold text-gray-300">
-              No of Openings
+            <div className="font-semibold max-sm:text-base text-xl text-center pb-1">
+              200+
+            </div>
+            <div className="text-xs max-sm:text-[8px] font-semibold text-gray-300">
+              Job Openings
             </div>
           </div>
           <div className="mx-[18px]">
-            <div className="font-semibold text-xl text-center pb-1">6 LPA</div>
-            <div className="text-xs font-semibold text-gray-300">
+            <div className="font-semibold max-sm:text-base text-xl text-center pb-1">
+              6 LPA
+            </div>
+            <div className="text-xs max-sm:text-[8px] font-semibold text-gray-300">
               Avg Package
             </div>
           </div>
@@ -82,7 +88,7 @@ const Home = () => {
         </a>
       </div>
       {/* category selectors and filter */}
-      <div className="px-16 mt-14 mb-8">
+      <div className="px-16 mt-14 mb-8 max-sm:text-xs">
         <div className="flex flex-row border-b-[1.5px] border-gray-400 w-full justify-between">
           <div className="text-gray-400 font-normal">
             <button
@@ -96,7 +102,7 @@ const Home = () => {
               All Jobs
             </button>
             <button
-              className={`p-2 relative ${
+              className={`p-2 relative z-0 ${
                 clicked === "Job Fair"
                   ? "border-b-[3px] border-gray-400 text-gray-200 font-semibold"
                   : null
@@ -129,7 +135,7 @@ const Home = () => {
             </button>
           </div>
           <div className="flex">
-            <button className="flex px-4 py-1 border rounded-md text-green-700 border-green-700 mb-2 text-sm items-center hover:text-white hover:bg-green-700">
+            <button className="flex px-4 py-1 border rounded-md text-green-700 border-green-700 mb-2 max-sm:mb-0 text-sm max-sm:text-xs items-center hover:text-white hover:bg-green-700">
               <CiFilter size={25} style={{ color: "green-700" }} />
               Filter
             </button>
@@ -138,7 +144,7 @@ const Home = () => {
       </div>
       {/* jobs */}
       <JobList />
-      <div className="w-24 h-24 fixed bottom-5 right-5 cursor-pointer">
+      <div className="w-24 h-24 max-sm:w-16 max-sm:h-16 fixed bottom-5 right-5 cursor-pointer">
         <img src="https://media.geeksforgeeks.org/img-practice/fab-icon-new.gif" />
       </div>
     </div>
